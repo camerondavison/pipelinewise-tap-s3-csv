@@ -173,6 +173,7 @@ def sample_files(config: Dict, table_spec: Dict, s3_files: Generator,
     :returns: Generator containing all samples as dicts
     """
     sample_rate = table_spec.get('sample_rate', sample_rate)
+    max_records = table_spec.get('max_records', max_records)
     
     LOGGER.info("Sampling files (max files: %s)", max_files)
     for s3_file in more_itertools.tail(max_files, s3_files):
