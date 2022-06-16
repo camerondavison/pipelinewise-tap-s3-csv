@@ -11,4 +11,5 @@ CONFIG_CONTRACT = Schema([{
     Optional('date_overrides'): [str],
     Optional('delimiter'): str,
     Optional('sample_rate'): int,
+    Optional('max_records'): int,
 }])
