@@ -26,7 +26,7 @@ def generate_schema(samples: List[Dict], table_spec: Dict) -> Dict:
     row_set.register_processor(headers_processor(headers))
     row_set.register_processor(offset_processor(offset + 1))
 
-    types = type_guess(row_set.sample, strict=True)
+    types = type_guess(row_set, strict=True)
 
     for header, header_type in zip(headers, types):
 
